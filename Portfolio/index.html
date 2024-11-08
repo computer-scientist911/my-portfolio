@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jawwad Najeeb Portfolio</title>
+    <style>
+
+
+        
+
+
+
+.content-container {
+    
+        padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  
+   
+}
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* FOR Header and Navigation Bar */
+        header {
+            width: 100%;
+            background-color: #228B22;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+
+        /* For Main Content */
+        main {
+            flex: 1;
+            padding-top: 80px;                         /* Space for the fixed header */
+            padding-bottom: 60px;                    /* Space for the fixed footer */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Code for Centered Container for All Sections */
+        .content-container {
+            width: 80%;                            
+            max-width: 1000px;
+            background-color: #fff;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 40px;
+        }
+
+        .content-container h1 {
+            font-size: 32px;                                     
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .career-section h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .goal-list {
+            list-style: none;
+            text-align: left;
+            padding: 0;
+        }
+
+        .goal-list li {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .motivational-quote {
+            font-size: 16px;
+            font-style: italic;
+            color: #555;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f8f8f8;
+            margin-top: 20px;
+        }
+
+        .content-container p {
+            font-size: 18px; /* Increase font size */
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+
+
+        /* Profile Section */
+        .profile-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .profile-card h2 {
+            font-size: 28px; /* Increase font size */
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .profile-card p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+        }
+         
+
+
+         /* Contact Me Section */
+
+
+
+                #contact {
+                    text-align: center;
+                    padding: 40px;
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+
+                #contact h1 {
+                    font-size: 32px;
+                    margin-bottom: 20px;
+                }
+
+                .contact-form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                }
+
+                .contact-form label {
+                    text-align: left;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+
+                .contact-form input,
+                .contact-form textarea {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 16px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    outline: none;
+                }
+
+                .contact-form input:focus,
+                .contact-form textarea:focus {
+                    border-color: #333;
+                }
+
+                .contact-form button {
+                    padding: 12px 20px;
+                    font-size: 16px;
+                    color: #fff;
+                    background-color: #333;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                .contact-form button:hover {
+                    background-color: #3f17e1;
+                }
+
+
+                /* Contact Details */
+                .contact-details {
+                    margin-top: 30px;
+                    text-align: center;
+                    font-size: 16px;
+                }
+
+                .contact-details h2 {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+
+                .contact-details p {
+                    margin: 5px 0;
+                    color: #555;
+                }
+
+
+
+
+
+              /*    Project  Section */
+
+                        .projects-grid {
+                    display: flex;
+                    gap: 20px;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                }
+
+                .project-card {
+                    width: 300px;
+                    background-color: #f0f0e9;
+                    border: 1px solid #ddd;
+                    border-radius: 8px;
+                    padding: 20px;
+                    text-align: center;
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                }
+
+                .project-card img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 5px;
+                }
+
+                .project-card h2 {
+                    font-size: 20px;
+                    margin: 15px 0 10px;
+                    color: #333;
+                }
+
+                .project-card p {
+                    font-size: 14px;
+                    color: #666;
+                    margin-bottom: 10px;
+                }
+
+                .project-links a {
+                    color: #0066cc;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+
+                .project-links a:hover {
+                    text-decoration: underline;
+                }
+
+
+
+                /* Skills Section */
+
+                .skill {
+                    margin: 20px 0;
+                    text-align: left;
+                }
+
+                .skill span {
+                    font-weight: bold;
+                    display: inline-block;
+                    margin-bottom: 5px;
+                }
+
+                .progress-bar {
+                    background-color: #e0e0e0;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    height: 20px;
+                }
+
+                .progress {
+                    height: 100%;
+                    line-height: 20px;
+                    color: white;
+                    text-align: center;
+                    font-size: 14px;
+                    border-radius: 20px;
+                }
+
+
+
+
+
+
+        /* Code for Footer */
+
+        footer {
+            width: 100%;
+            background-color: #228B22;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: #ffa500;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+    
+
+        main > section {
+            display: none;
+        }
+
+        #welcome:target,
+        #profile:target,
+        #goals:target,
+        #projects:target,
+        #skills:target,
+        #contact:target {
+            display: block;
+        }
+    </style>
+
+
+
+
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#welcome">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#goals">Career Goals</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ 
+    <main>
+      
+        <section id="welcome" class="content-container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hello! My name is Jawwad Najeeb. I am a passionate computer science student with a love for web development, machine learning, and problem-solving. I enjoy building new projects and constantly learning new technologies to improve my skills.</p>
+            <p>In this portfolio, you will find my latest projects, career goals, skills, and ways to get in touch with me.</p>
+        </section>
+
+        <!-- Profile Section -->
+
+
+        <section id="profile" class="content-container">
+            <div class="profile-card">
+                <img src="images/pic.png" alt="Profile Picture" class="profile-pic">
+                <h2>Jawwad Najeeb </h2>
+                <p>A passionate Computer Science student with a focus on web development and machine learning. I enjoy building innovative projects and solving complex problems. I'm currently pursuing my degree at FAST University and actively exploring new technologies to improve my skills.</p>
+            </div>
+            
+            <div class="additional-info">
+                <p>Aside from coding, I love reading tech blogs, participating in hackathons, and mentoring other students. I aim to contribute to open-source projects and become an expert in full-stack development and data science.</p>
+            </div>
+        </section>
+
+       
+
+         <!-- Career Goals Section -->
+
+
+         <section id="goals" class="content-container career-section">
+            <h1>Career Goals</h1>
+            
+            <!-- Short-Term Goals -->
+            <h2>Short-Term Goals</h2>
+            <ul class="goal-list">
+                <li>Complete my internship at Tech ghosts to gain practical experience.</li>
+                <li>Enhance my web development skills by learning React.js.</li>
+                <li>Participate in hackathons to collaborate with peers and develop new projects.</li>
+                <li>Join a professional networking group to connect with industry experts.</li>
+            </ul>
+
+            <!-- Long-Term Goals -->
+            <h2>Long-Term Goals</h2>
+            <ul class="goal-list">
+                <li>Become a lead software developer within five years.</li>
+                <li>Start my own tech startup focused on innovative solutions.</li>
+                <li>Contribute to open-source projects to give back to the community.</li>
+                <li>Mentor junior developers and help them grow in their careers.</li>
+            </ul>
+
+            <!-- Motivational Quote -->
+            <div class="motivational-quote">
+                "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful." - Albert Schweitzer
+            </div>
+        </section>
+
+
+
+
+
+        <!-- Projects Section -->
+        
+
+        <section id="projects" class="content-container">
+            <h1>Projects</h1>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/project1.jpg" alt="Project Image">
+                    <h2>Project Title 1</h2>
+                    <p>A brief description of what this project is about, its goals, and any relevant details.</p>
+                    <p><strong>Technologies Used:</strong> HTML, CSS</p>
+                    <div class="project-links">
+                        <a href="#">GitHub</a> | <a href="#">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project2.jpg" alt="Project Image">
+                    <h2>Project Title 2</h2>
+                    <p>A brief description of what this project is about, its goals, and any relevant details.</p>
+                    <p><strong>Technologies Used:</strong> React, Node.js</p>
+                    <div class="project-links">
+                        <a href="#">GitHub</a> | <a href="#">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project3.jpg" alt="Project Image">
+                    <h2>Project Title 3</h2>
+                    <p>A brief description of what this project is about, its goals, and any relevant details.</p>
+                    <p><strong>Technologies Used:</strong> Python, Flask</p>
+                    <div class="project-links">
+                        <a href="#">GitHub</a> | <a href="#">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+       
+        
+        <!-- Skills Section -->
+
+
+<section id="skills" class="content-container">
+    <h1>Skills</h1>
+    
+    <div class="skill">
+        <span>HTML</span>
+        <div class="progress-bar">
+            <div class="progress" style="width: 90%; background-color: #e88383;">70%</div>
+        </div>
+    </div>
+    
+    <div class="skill">
+        <span>CSS</span>
+        <div class="progress-bar">
+            <div class="progress" style="width: 85%; background-color: #99ccff;">50%</div>
+        </div>
+    </div>
+    
+    <div class="skill">
+        <span>JavaScript</span>
+        <div class="progress-bar">
+            <div class="progress" style="width: 80%; background-color: #b8ee2f;">10%</div>
+        </div>
+    </div>
+    
+    <div class="skill">
+        <span>Python</span>
+        <div class="progress-bar">
+            <div class="progress" style="width: 75%; background-color: #5d705d;">55%</div>
+        </div>
+    </div>
+    
+    <div class="skill">
+        <span>React</span>
+        <div class="progress-bar">
+            <div class="progress" style="width: 70%; background-color: #9236ed;">60%</div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Contact Me Section -->
+
+
+<section id="contact" class="content-container">
+    <h1>Contact Me</h1>
+    
+    <form class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+ 
+        <!-- Contact Details -->
+    <div class="contact-details">
+        <h2>Contact Details</h2>
+        <p>Email: <a href="mailto:jawwadnajeeb54@gmail.com">jawwadnajeeb54@gmail.com</a></p>
+        <p>Phone number: 0349-8950362</p>
+    </div>
+</section>
+    </main>
+
+
+    <!-- Footer -->
+
+    
+    <footer>
+        <p>&copy; 2024 Jawwad Najeeb. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">GitHub</a> | <a href="#">LinkedIn</a> | <a href="#contact">Contact Me</a>
+        </div>
+    </footer>
+</body>
+</html>
